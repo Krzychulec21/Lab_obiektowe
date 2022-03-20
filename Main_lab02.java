@@ -49,7 +49,7 @@ public class Main_lab02 {
             if(delta==0)
                 System.out.println("miejsce zerowe x0: "+(-b/2*a));
             if(delta>0)
-                System.out.println("miejsce zerowe x1: "+((-b+pwd)/2*a)+" x2: "+((-b-pwd)/2*a));
+                System.out.println("miejsce zerowe x1: "+((-b+pwd)/(2*a))+" x2: "+((-b-pwd)/(2*a)));
         }
         else System.out.println("nie jest to rownanie kwadratowe ( współczynnik a=0 )");
     }
