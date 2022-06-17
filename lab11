@@ -1,0 +1,78 @@
+package com.company;
+
+import java.io.*;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+    /*File plik = new File("ala.txt");              //zad1
+        PrintWriter zapis = new PrintWriter(plik);
+        Scanner in = new Scanner(System.in);
+        while(true){
+            String linia = in.nextLine();
+            if(linia.equals("-"))
+                break;
+            zapis.write(linia);
+            zapis.write(System.lineSeparator());
+        }
+        zapis.close();
+    */
+       /* BufferedReader fileReader = null;       //zad2
+        int i = 0;
+        Scanner in = new Scanner(System.in);
+        System.out.println("podaj sceizke do pliku: ");
+        String sciezka = in.nextLine();
+
+        fileReader = new BufferedReader(new FileReader(sciezka));
+
+        while (true) {
+           String linia = fileReader.readLine();
+            if (linia == null) {
+                break;
+            }
+            i++;
+            System.out.println(linia);
+        }
+        System.out.println("liczba linijek: "+i);*/
+
+        /* int dzien,miesiac,rok;   //zad3
+        String sciezka = "ala.txt";
+        Scanner in = new Scanner(System.in);
+        System.out.println("Podaj kolejno swój: dzień, miesiac i rok urodzenia zatwierdzajc enterem");
+        dzien = in.nextInt();
+        miesiac = in.nextInt();
+        rok = in.nextInt();
+
+        DataOutputStream outputStream = null;
+        try{
+            outputStream = new DataOutputStream(new FileOutputStream(sciezka));
+            outputStream.writeInt(dzien);
+            outputStream.writeInt(miesiac);
+            outputStream.writeInt(rok);
+        }
+        finally {
+            if(outputStream != null){
+                outputStream.close();
+            }
+        }
+*/
+        String sciezka = "ala.txt";         //zad4
+        int number = 0,number2=0,number3=0;
+        DataInputStream inputStream = null;
+
+        try {
+            inputStream = new DataInputStream(new FileInputStream(sciezka));
+            number = inputStream.readInt();
+            number2 = inputStream.readInt();
+            number3 = inputStream.readInt();
+        } finally {
+            if (inputStream != null) {
+                inputStream.close();
+            }
+        }
+        System.out.println(number + " " + number2+" "+number3);
+    }
+
+}
+
